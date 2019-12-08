@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Simplex</string>
+    <string name="accion_acerca">Acerca</string>
+    <string name="maximizar">Maximizar</string>
+    <string name="restricciones">restricciones</string>
+    <string name="maximizar_ecuacion">maximizar ecuacion:</string>
+    <string name="nicolas_duran">Nicolas Duran</string>
+    <string name="programado_por">Programado por:</string>
+</resources>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="tefor.simplex.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:fillViewport="true">
+
+    <!-- Para mostrar mensajes con SnackBar -->
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- el contenido -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Para la ecuacion -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/contentMain_ecuacionTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/maximizar_ecuacion"/>
+
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <!-- Barra separadora -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#C8C9CB"/>
+
+            <!-- las restricciones y el boton maximizar -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="16dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="4dp"> <!-- height=0dp cardElevation=4-->
+
+                    <EditText
+                        android:id="@+id/contentMain_restriccionesEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:gravity="top|start"
+                        android:background="@null"
+                        android:hint="@string/restricciones"/>
+                </android.support.v7.widget.CardView>
+
+                <Button
+                    android:id="@+id/contentMain_maximizarButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_gravity="end"
+                    android:text="@string/maximizar"
+                    android:textColor="@android:color/white"
+                    android:background="@color/verde"/>
+            </LinearLayout>
+        </LinearLayout> <!-- el contenido -->
+    </android.support.design.widget.CoordinatorLayout>
+
+</ScrollView>
